@@ -19,5 +19,6 @@ def key_for_min_value(name_hash)
         end
       end
     end
+    return current_key
   end
 end

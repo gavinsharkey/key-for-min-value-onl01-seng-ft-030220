@@ -7,5 +7,12 @@ def key_for_min_value(name_hash)
   else
     keys = name_hash.collect { |key, value| key }
     values = name_hash.collect { |key, value| value }
+    
+    current = values[0]
+
+    values.each { |value| value < current ? current = value : nil}
+
+    keys[values.find_index(current)]
+    
   end
 end
